@@ -18,6 +18,7 @@ const Page = () => {
 
   const proceedToNextQuestion = () => {
     setQuestionNumber((prev) => ++prev);
+    setSelectedOption('');
     setResult(null);
     setDisableCheckButton(true);
     setDisableNextButton(true);
@@ -33,6 +34,7 @@ const Page = () => {
   };
 
   const checkAnswer = () => {
+    setDisableCheckButton(true);
     if (selectedOption === questionsAndAnswers[questionNumber - 1].answer) {
       setCorrectAnswers((prev) => ++prev);
       setResult('correct');
@@ -72,9 +74,9 @@ const Page = () => {
       <main className={styles.questionPage}>
         <h2>Question {questionNumber}:</h2>
         <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
-        <div className={styles.answerOptions}>
+        <div className={styles.options}>
           {questionsAndAnswers[questionNumber - 1].options.map((option) => {
-            return <button type="button" key={option} className={`${styles.option} ${selectedOption === option ? styles.chosen : ''}`} onClick={() => selectOption(option)}>{option}</button>
+            return <button type="button" key={option} className={`${styles.option} ${selectedOption === option ? styles.chosen : ''} ${result === 'correct' && selectedOption === option ? styles.correct : ''} ${result === 'incorrect' && option === questionsAndAnswers[questionNumber - 1].answer ? styles.correct : ''} ${result === 'incorrect' && selectedOption === option ? styles.incorrect : ''}` } onClick={() => selectOption(option)}>{option}</button>
           })}
         </div>
         <button type="submit" className={styles.submitButton} onClick={checkAnswer} disabled={disableCheckButton}>Check Answer</button>
