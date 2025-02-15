@@ -10,6 +10,7 @@ import styles from './page.module.css';
 import { Result } from '@/components/molecules/result';
 import { Answer } from '@/components/atoms/answer';
 import { Options } from '@/components/molecules/options';
+import { QuestionText } from '@/components/atoms/question-text';
 
 const Page = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -92,8 +93,7 @@ const Page = () => {
       <main className={styles.main}>
         <div className={styles.questionPage}>
           <Logo />
-          <h2>Question {questionNumber}:</h2>
-          <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
+          <QuestionText questionNumber={questionNumber} question={questionsAndAnswers[questionNumber - 1].question}/>
           <Options 
             options={questionsAndAnswers[questionNumber - 1].options}
             selectedOption={selectedOption}
