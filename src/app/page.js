@@ -9,6 +9,8 @@ const Page = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [result, setResult] = useState(null);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [disableCheckButton, setDisableCheckButton] = useState(true);
+  const [disableNextButton, setDisableNextButton] = useState(true);
 
   const shareResult = () => {
     console.log('sharing result')
@@ -17,6 +19,8 @@ const Page = () => {
   const proceedToNextQuestion = () => {
     setQuestionNumber((prev) => ++prev);
     setResult(null);
+    setDisableCheckButton(true);
+    setDisableNextButton(true);
   }
 
   const restartQuiz = () => {
@@ -25,6 +29,7 @@ const Page = () => {
 
   const selectOption = (option) => {
     setSelectedOption(option);
+    setDisableCheckButton(false);
   };
 
   const checkAnswer = () => {
@@ -34,6 +39,7 @@ const Page = () => {
     } else {
       setResult('incorrect');
     }
+    setDisableNextButton(false);
   };
 
   if (questionNumber === 0) {
@@ -71,12 +77,12 @@ const Page = () => {
             return <button type="button" key={option} className={styles.option} onClick={() => selectOption(option)}>{option}</button>
           })}
         </div>
-        <button type="submit" className={styles.submitButton} onClick={checkAnswer}>Check Answer</button>
+        <button type="submit" className={styles.submitButton} onClick={checkAnswer} disabled={disableCheckButton}>Check Answer</button>
         {result && <div>
           <p>That is {result}!</p>
           <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${questionsAndAnswers[questionNumber - 1].answer}.`}</p>
         </div>}
-        <button type="button" className={styles.startButton} onClick={proceedToNextQuestion}>Next Question</button>
+        <button type="button" className={styles.startButton} onClick={proceedToNextQuestion} disabled={disableNextButton}>Next Question</button>
       </main>
     );
   }
