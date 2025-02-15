@@ -7,9 +7,9 @@ import { Logo } from '@/components/atoms/logo';
 import { Title } from '@/components/atoms/title';
 import { Button } from '@/components/atoms/button';
 import styles from './page.module.css';
-import { ResultText } from '@/components/atoms/result-text';
-import { ResultImage } from '@/components/atoms/result-image';
 import { Result } from '@/components/molecules/result';
+import { Answer } from '@/components/atoms/answer';
+import { Options } from '@/components/molecules/options';
 
 const Page = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -94,16 +94,15 @@ const Page = () => {
           <Logo />
           <h2>Question {questionNumber}:</h2>
           <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
-          <div className={styles.options}>
-            {questionsAndAnswers[questionNumber - 1].options.map((option) => {
-              return <button type="button" key={option} className={`${styles.option} ${selectedOption === option ? styles.chosen : ''} ${result === 'correct' && selectedOption === option ? styles.correct : ''} ${result === 'incorrect' && option === questionsAndAnswers[questionNumber - 1].answer ? styles.correct : ''} ${result === 'incorrect' && selectedOption === option ? styles.incorrect : ''}` } onClick={() => selectOption(option)}>{option}</button>
-            })}
-          </div>
+          <Options 
+            options={questionsAndAnswers[questionNumber - 1].options}
+            selectedOption={selectedOption}
+            result={result}
+            answer={questionsAndAnswers[questionNumber - 1].answer}
+            onClick={selectOption}
+          />
           <Button onClick={checkAnswer} disabled={disableCheckButton} buttonText="Check Answer"/>
-          {result && <div>
-            <p>That is {result}!</p>
-            <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${questionsAndAnswers[questionNumber - 1].answer}.`}</p>
-          </div>}
+          {result && <Answer result={result} answer={questionsAndAnswers[questionNumber - 1].answer} />}
           <Button onClick={proceedToNextQuestion} disabled={disableNextButton} buttonText={questionNumber === 10 ? "See My Results" : "Next Question"}/>
         </div>
       </main>
