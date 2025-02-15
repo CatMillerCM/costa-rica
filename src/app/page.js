@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { questionsAndAnswers } from '@/data';
+import { questionsAndAnswers, resultAnimals } from '@/data';
 import styles from './page.module.css';
 
 const Page = () => {
@@ -44,6 +44,13 @@ const Page = () => {
     setDisableNextButton(false);
   };
 
+  const getResultAnimalData = () => {
+    if (correctAnswers <= 3) return resultAnimals.low
+    else if (correctAnswers <= 5) return resultAnimals.mid
+    else if (correctAnswers <= 7) return resultAnimals.good
+    return resultAnimals.excellent
+  }
+
   if (questionNumber === 0) {
     return (
       <main className={styles.startPage}>
@@ -58,12 +65,13 @@ const Page = () => {
   if (questionNumber === 11) {
     return (
       <main className={styles.endPage}>
+        <p>LOGO</p>
         <h2>You scored {correctAnswers}/10</h2>
-        <p>Nice work!</p>
-        <p>Youre a jaguar!</p>
-        <p>Stealthy and intelligent, you know your stuff....</p>
+        <p>{getResultAnimalData().resultIntro}</p>
+        <p>You are a {getResultAnimalData().animal}!</p>
+        <p>{getResultAnimalData().animalDescription}</p>
         <div className={styles.resultAnimal}></div>
-        <button type="button" className={styles.shareButtom} onClick={shareResult}>Share My Result</button>
+        <button type="button" className={styles.shareButton} onClick={shareResult}>Share My Result</button>
         <button type="button" className={styles.startButton} onClick={restartQuiz}>Retake Quiz</button>
       </main>
     );
@@ -72,6 +80,7 @@ const Page = () => {
   if (questionNumber > 0 && questionNumber <= 10) {
     return (
       <main className={styles.questionPage}>
+        <p>LOGO</p>
         <h2>Question {questionNumber}:</h2>
         <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
         <div className={styles.options}>

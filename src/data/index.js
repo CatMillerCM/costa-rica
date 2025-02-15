@@ -48,6 +48,29 @@ const questionsAndAnswers = [
     options: ['A', 'B', 'C', 'D'],
     answer: 'A'
   }
-]
+];
 
-export { questionsAndAnswers };
+const resultAnimals = {
+  excellent: {
+    animal: 'jaguar',
+    animalDescription: 'Spiel about why jaguar is the best.',
+    resultIntro: 'You know your stuff!'
+  },
+  good: {
+    animal: 'turtle',
+    animalDescription: 'Spiel about why turtle is wise',
+    resultIntro: 'Pretty good stuff!'
+  },
+  mid: {
+    animal: 'monkey',
+    animalDescription: 'Spiel about why monkey need more work',
+    resultIntro: 'Cheeky, study harder!'
+  },
+  low: {
+    animal: 'sloth',
+    animalDescription: 'Spiel about why sloths are slow',
+    resultIntro: 'Looks like you need to brush up!'
+  }
+};
+
+export { questionsAndAnswers, resultAnimals };
