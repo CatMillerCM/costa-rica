@@ -13,10 +13,15 @@ const End = ({ setQuestionNumber, correctAnswers }) => {
     <div className={styles.endPage}>
     <div className={styles.shareResult} ref={resultRef}>
       <Logo />
-      <Result correctAnswers={correctAnswers} />
+      <Result
+        correctAnswers={correctAnswers}
+      />
     </div>
     {/* <ShareButton /> */}
-    <Button onClick={() => setQuestionNumber(0)} buttonText="Retake Quiz"/>
+    <Button
+      onClick={() => setQuestionNumber(0)}
+      buttonText="Retake Quiz"
+    />
   </div>
   )
 };

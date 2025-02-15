@@ -6,7 +6,9 @@ import styles from './result.module.css';
 const Result = ({ correctAnswers }) => {
   return (
     <div>
-      <ResultText correctAnswers={correctAnswers}/>
+      <ResultText
+        correctAnswers={correctAnswers}
+      />
       <ResultImage />
     </div>
   )

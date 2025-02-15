@@ -11,7 +11,10 @@ const Start = ({ setQuestionNumber }) => {
   return (
     <div className={styles.startPage}>
       <Title />
-      <Button onClick={startQuiz} buttonText="Start Quiz"/>
+      <Button
+        onClick={startQuiz}
+        buttonText="Start Quiz"
+      />
     </div>
   )
 };
