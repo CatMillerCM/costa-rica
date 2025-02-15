@@ -2,11 +2,14 @@
 
 import { useState, useRef } from 'react';
 // import html2canvas from 'html2canvas';
-import { questionsAndAnswers, resultAnimals } from '@/data';
+import { questionsAndAnswers } from '@/data';
 import { Logo } from '@/components/atoms/logo';
 import { Title } from '@/components/atoms/title';
 import { Button } from '@/components/atoms/button';
 import styles from './page.module.css';
+import { ResultText } from '@/components/atoms/result-text';
+import { ResultImage } from '@/components/atoms/result-image';
+import { Result } from '@/components/molecules/result';
 
 const Page = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -58,13 +61,6 @@ const Page = () => {
     setDisableNextButton(false);
   };
 
-  const getResultAnimalData = () => {
-    if (correctAnswers <= 3) return resultAnimals.low
-    else if (correctAnswers <= 5) return resultAnimals.mid
-    else if (correctAnswers <= 7) return resultAnimals.good
-    return resultAnimals.excellent
-  }
-
   if (questionNumber === 0) {
     return (
       <main className={styles.main}>
@@ -82,11 +78,7 @@ const Page = () => {
         <div className={styles.endPage}>
           <div className={styles.shareResult} ref={resultRef}>
             <Logo />
-            <h2>You scored {correctAnswers}/10</h2>
-            <p>{getResultAnimalData().resultIntro}</p>
-            <p>You are a {getResultAnimalData().animal}!</p>
-            <p>{getResultAnimalData().animalDescription}</p>
-            <div className={styles.resultAnimal}></div>
+            <Result correctAnswers={correctAnswers} />
           </div>
           {/* <button type="button" className={styles.shareButton} onClick={shareResult}>Share My Result</button> */}
           <Button onClick={restartQuiz} buttonText="Retake Quiz"/>
@@ -112,7 +104,7 @@ const Page = () => {
             <p>That is {result}!</p>
             <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${questionsAndAnswers[questionNumber - 1].answer}.`}</p>
           </div>}
-          <Button onClick={proceedToNextQuestion} disabled={disableNextButton} buttonText="Next Question"/>
+          <Button onClick={proceedToNextQuestion} disabled={disableNextButton} buttonText={questionNumber === 10 ? "See My Results" : "Next Question"}/>
         </div>
       </main>
     );
