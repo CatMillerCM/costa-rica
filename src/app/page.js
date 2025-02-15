@@ -3,6 +3,8 @@
 import { useState, useRef } from 'react';
 // import html2canvas from 'html2canvas';
 import { questionsAndAnswers, resultAnimals } from '@/data';
+import { Logo } from '@/components/atoms/logo';
+import { Title } from '@/components/atoms/title';
 import { Button } from '@/components/atoms/button';
 import styles from './page.module.css';
 
@@ -67,9 +69,7 @@ const Page = () => {
     return (
       <main className={styles.main}>
         <div className={styles.startPage}>
-          <h1 className={styles.costa}>Costa</h1>
-          <h1 className={styles.rica}>Eu-rica!</h1>
-          <h3 className={styles.intro}>Test your knowledge and learn more about this country&apos;s famous animals in this interactive quiz!</h3>
+          <Title />
           <Button onClick={proceedToNextQuestion} buttonText="Start Quiz"/>
         </div>
       </main>
@@ -81,7 +81,7 @@ const Page = () => {
       <main className={styles.main}>
         <div className={styles.endPage}>
           <div className={styles.shareResult} ref={resultRef}>
-            <p>LOGO</p>
+            <Logo />
             <h2>You scored {correctAnswers}/10</h2>
             <p>{getResultAnimalData().resultIntro}</p>
             <p>You are a {getResultAnimalData().animal}!</p>
@@ -99,7 +99,7 @@ const Page = () => {
     return (
       <main className={styles.main}>
         <div className={styles.questionPage}>
-          <p>LOGO</p>
+          <Logo />
           <h2>Question {questionNumber}:</h2>
           <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
           <div className={styles.options}>
