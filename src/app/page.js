@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { questionsAndAnswers } from '@/data';
 import styles from './page.module.css';
 
 const Page = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
   const [result, setResult] = useState(null);
-  let correctAnswers = 0;
+  const [correctAnswers, setCorrectAnswers] = useState(0);
 
   const shareResult = () => {
     console.log('sharing result')
@@ -22,13 +23,13 @@ const Page = () => {
     setQuestionNumber(0);
   };
 
-  const selectAnswer = (answer) => {
-    setSelectedAnswer(answer);
+  const selectOption = (option) => {
+    setSelectedOption(option);
   };
 
   const checkAnswer = () => {
-    if (selectedAnswer === 'B') {
-      correctAnswers++;
+    if (selectedOption === questionsAndAnswers[questionNumber - 1].answer) {
+      setCorrectAnswers((prev) => ++prev);
       setResult('correct');
     } else {
       setResult('incorrect');
@@ -46,7 +47,7 @@ const Page = () => {
     );
   }
 
-  if (questionNumber === 2) {
+  if (questionNumber === 11) {
     return (
       <main className={styles.endPage}>
         <h2>You scored {correctAnswers}/10</h2>
@@ -60,21 +61,20 @@ const Page = () => {
     );
   }
 
-  if (questionNumber > 0 && questionNumber < 2) {
+  if (questionNumber > 0 && questionNumber <= 10) {
     return (
       <main className={styles.questionPage}>
         <h2>Question {questionNumber}:</h2>
-        <h2>What is the question?</h2>
+        <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
         <div className={styles.answerOptions}>
-          <button type="button" className={styles.answerOption} onClick={() => selectAnswer('A')}>A</button>
-          <button type="button" className={styles.answerOption} onClick={() => selectAnswer('B')}>B</button>
-          <button type="button" className={styles.answerOption} onClick={() => selectAnswer('C')}>C</button>
-          <button type="button" className={styles.answerOption} onClick={() => selectAnswer('D')}>D</button>
+          {questionsAndAnswers[questionNumber - 1].options.map((option) => {
+            return <button type="button" key={option} className={styles.option} onClick={() => selectOption(option)}>{option}</button>
+          })}
         </div>
         <button type="submit" className={styles.submitButton} onClick={checkAnswer}>Check Answer</button>
         {result && <div>
           <p>That is {result}!</p>
-          <p>{result === 'correct' ? 'Well done!' : 'The correct answer was B.'}</p>
+          <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${questionsAndAnswers[questionNumber - 1].answer}.`}</p>
         </div>}
         <button type="button" className={styles.startButton} onClick={proceedToNextQuestion}>Next Question</button>
       </main>
