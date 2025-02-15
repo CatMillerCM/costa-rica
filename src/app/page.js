@@ -1,12 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-// import html2canvas from 'html2canvas';
-
-import styles from './page.module.css';
 import { End } from '@/components/organisms/end';
 import { Question } from '@/components/organisms/question';
 import { Start } from '@/components/organisms/start';
+import styles from './page.module.css';
 
 const Page = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
