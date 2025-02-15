@@ -1,0 +1,15 @@
+.button {
+  height: 3rem;
+  width: fit-content;
+  padding: 1rem;
+  background-color: white;
+  color: darkgreen;
+  border-radius: 8px;
+  border: 2px solid rgb(79, 48, 14);
+  font-size: 1rem;
+}
+
+.button:disabled {
+  background-color: #dddddd;
+  color: white;
+}
