@@ -74,7 +74,7 @@ const Page = () => {
         <h2>{questionsAndAnswers[questionNumber - 1].question}</h2>
         <div className={styles.answerOptions}>
           {questionsAndAnswers[questionNumber - 1].options.map((option) => {
-            return <button type="button" key={option} className={styles.option} onClick={() => selectOption(option)}>{option}</button>
+            return <button type="button" key={option} className={`${styles.option} ${selectedOption === option ? styles.chosen : ''}`} onClick={() => selectOption(option)}>{option}</button>
           })}
         </div>
         <button type="submit" className={styles.submitButton} onClick={checkAnswer} disabled={disableCheckButton}>Check Answer</button>

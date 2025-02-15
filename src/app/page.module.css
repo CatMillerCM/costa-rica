@@ -4,3 +4,7 @@
   gap: 1rem;
   align-items: center;
 }
+
+.chosen {
+  background-color: red;
+}
