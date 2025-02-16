@@ -6,8 +6,13 @@ import { Button } from '@/components/atoms/button';
 import { ShareButton } from '@/components/atoms/share-button';
 import styles from './end.module.css';
 
-const End = ({ setQuestionNumber, correctAnswers }) => {
+const End = ({ setQuestionNumber, setCorrectAnswers, correctAnswers }) => {
   const resultRef = useRef(null);
+
+  const retakeQuiz = () => {
+    setQuestionNumber(0);
+    setCorrectAnswers(0);
+  };
 
   return (
     <div className={styles.endPage}>
@@ -17,9 +22,11 @@ const End = ({ setQuestionNumber, correctAnswers }) => {
         correctAnswers={correctAnswers}
       />
     </div>
-    {/* <ShareButton /> */}
+    <ShareButton
+      resultRef={resultRef}
+    />
     <Button
-      onClick={() => setQuestionNumber(0)}
+      onClick={retakeQuiz}
       buttonText="Retake Quiz"
     />
   </div>
@@ -28,6 +35,7 @@ const End = ({ setQuestionNumber, correctAnswers }) => {
 
 End.propTypes = {
   setQuestionNumber: PropTypes.func.isRequired,
+  setCorrectAnswers: PropTypes.func.isRequired,
   correctAnswers: PropTypes.number.isRequired
 };
 

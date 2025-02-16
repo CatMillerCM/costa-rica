@@ -25,6 +25,7 @@ const Page = () => {
       <main className={styles.main}>
         <End 
           setQuestionNumber={setQuestionNumber}
+          setCorrectAnswers={setCorrectAnswers}
           correctAnswers={correctAnswers}
         />
       </main>
