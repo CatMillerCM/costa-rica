@@ -1,5 +1,5 @@
 // import html2canvas from 'html2canvas';
-import styles from './button.module.css';
+import styles from './share-button.module.css';
 
 const ShareButton = () => {
       // const shareResult = async () => {
