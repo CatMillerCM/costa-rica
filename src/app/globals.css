@@ -5,7 +5,11 @@
 }
 
 h1, h2 {
-  font-family: "Rubik Dirt", cursive;
+  font-family: "Rubik Dirt", Verdana;
+}
+
+p {
+  font-size: 1.5rem;
 }
 
 body {

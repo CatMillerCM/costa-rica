@@ -1,0 +1,27 @@
+.costa, .rica {
+  font-size: 5.25rem;
+  color: #ff9a00;
+  text-shadow: 4px 4px 20px black;
+  margin: 0;
+  transform: rotate(-5deg);
+  /* animation: crashIn 1s cubic-bezier(0.59, 1.09, 0.92, 1.06) forwards; */
+}
+
+.rica {
+  margin-top: -2.25rem;
+}
+
+.intro {
+  color: #c2ff61;
+  padding: 0 3rem;
+}
+
+@keyframes crashIn {
+  0% {
+    transform: translateY(-100vh) rotate(-5deg);;
+  }
+
+  100% {
+    transform: translateY(0) rotate(-5deg);;
+  }
+}
