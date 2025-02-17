@@ -1,0 +1,13 @@
+.answer {
+  max-height: 3.5rem;
+  min-height: 3.5rem;
+  color: var(--color-amber-flare);
+}
+
+.answer p {
+  margin: 0;
+}
+
+.answer :nth-child(2) {
+  margin-top: -0.75rem;
+}

@@ -4,8 +4,8 @@ import styles from './question-text.module.css';
 const QuestionText = ({ questionNumber, question }) => {
   return (
     <div>
-      <h2>Question {questionNumber}:</h2>
-      <h2>{question}</h2>
+      <h3 className={styles.number}>Question {questionNumber}:</h3>
+      <h2 className={styles.question}>{question}</h2>
     </div>
   )
 };

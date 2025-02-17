@@ -3,4 +3,9 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.result {
+  margin-bottom: 0.5rem;
 }

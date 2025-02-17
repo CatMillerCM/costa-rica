@@ -3,8 +3,8 @@ import styles from './logo.module.css';
 const Logo = ({  }) => {
   return (
     <div>
-      <p className={styles.costa}>Costa</p>
-      <p className={styles.rica}>Eu-rica!</p>
+      <p className={styles.costa}>COSTA</p>
+      <p className={styles.rica}>EU&#8209;RICA!</p>
     </div>
   )
 };

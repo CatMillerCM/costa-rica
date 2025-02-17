@@ -4,7 +4,7 @@ import styles from './options.module.css';
 
 const Options = ({ options, selectedOption, result, answer, onClick }) => {
   return (
-    <div className={styles.options}>
+    <div className={`${styles.options} ${result ? styles.result : ''}`}>
     {options.map((option) => {
       return (
         <Option 

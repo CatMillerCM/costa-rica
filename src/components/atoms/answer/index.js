@@ -3,7 +3,7 @@ import styles from './answer.module.css';
 
 const Answer = ({ result, answer }) => {
   return (
-    <div>
+    <div className={styles.answer}>
       <p>That is {result}!</p>
       <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${answer}.`}</p>
     </div>

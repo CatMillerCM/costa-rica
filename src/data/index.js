@@ -1,6 +1,6 @@
 const questionsAndAnswers = [
   {
-    question: 'What is question 1?',
+    question: 'What is the average speed of a sloth?',
     options: ['A', 'B', 'C', 'D'],
     answer: 'A'
   },
