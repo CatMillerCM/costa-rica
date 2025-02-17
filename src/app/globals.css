@@ -2,6 +2,13 @@
 
 :root {
   /* Colour Palette */
+  --color-amber-flare: #ff9a00;
+  --color-neon-lime: #c2ff61;
+  --color-rich-sienna: #724400;
+  --color-deep-forest: #073407;
+  --color-muted-grey: #dddddd;
+  --color-black: #000;
+  --color-white: #fff;
 }
 
 h1, h2 {

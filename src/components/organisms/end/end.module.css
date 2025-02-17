@@ -5,5 +5,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
+  background-color: var(--color-deep-forest);
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 6px 6px 20px var(--color-black);  
 }

@@ -1,5 +1,5 @@
 .option {
-  border: 2px solid black;
+  border: 2px solid var(--color-black);
   padding: 1rem;
   height: 4rem;
   width: 8rem;

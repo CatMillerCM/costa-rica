@@ -1,18 +1,18 @@
 .button {
   width: fit-content;
   padding: 0.75rem 1rem;
-  background-color: #c2ff61;
-  color: #724400;
+  background-color: var(--color-neon-lime);
+  color: var(--color-rich-sienna);
   border: none;
   border-radius: 8px;
   font-size: 1.75rem;
   font-family: inherit;
   text-transform: uppercase;
-  border-bottom: 8px solid #ff9a00;
-  box-shadow: 4px 4px 20px black;
+  border-bottom: 8px solid var(--color-amber-flare);
+  box-shadow: 4px 4px 20px var(--color-black);
 }
 
 .button:disabled {
-  background-color: #dddddd;
-  color: white;
+  background-color: var(--color-muted-grey);
+  color: var(--color-white);
 }
