@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import backgroundImg from '@/assets/background.png';
+import { animalImages } from '@/assets/animals';
 import { resultAnimals } from '@/data';
 import styles from './result.module.css';
 
@@ -10,17 +10,19 @@ const Result = ({ correctAnswers }) => {
     else if (correctAnswers <= 5) return resultAnimals.mid
     else if (correctAnswers <= 7) return resultAnimals.good
     return resultAnimals.excellent
-  }
+  };
+
+  const resultAnimal = getResultAnimalData().animal;
 
   return (
     <div>
       <h2>You scored {correctAnswers}/10!</h2>
-      <p className={styles.animal}>You are a {getResultAnimalData().animal}!</p>
+      <p className={styles.animal}>You are a {resultAnimal}!</p>
       <p className={styles.description}>{getResultAnimalData().animalDescription}</p>
       <div className={styles.resultAnimal}>
       <Image
-        src={backgroundImg}
-        alt=""
+        src={animalImages[resultAnimal]}
+        alt={resultAnimal}
       />
     </div>
     </div>

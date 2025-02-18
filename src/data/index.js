@@ -68,7 +68,7 @@ const resultAnimals = {
   },
   low: {
     animal: 'sloth',
-    animalDescription: 'WYou may be iconic, but it\'s time to pick up the pace and learn more about Costa Rica!',
+    animalDescription: 'You may be iconic, but it\'s time to pick up the pace and learn more about Costa Rica!',
     resultIntro: 'Looks like your brain is moving in slo-mo today!'
   }
 };
