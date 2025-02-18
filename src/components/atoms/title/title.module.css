@@ -1,9 +1,6 @@
 .costa, .rica {
   font-size: 5.25rem;
-  color: var(--color-amber-flare);
-  text-shadow: 4px 4px 20px var(--color-black);
   margin: 0;
-  transform: rotate(-5deg);
   /* animation: crashIn 1s cubic-bezier(0.59, 1.09, 0.92, 1.06) forwards; */
 }
 

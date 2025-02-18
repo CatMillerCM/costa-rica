@@ -6,10 +6,5 @@
 }
 
 .question {
-  color: var(--color-amber-flare);
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-shadow: 4px 4px 20px var(--color-black);
   margin: 0 0.75rem 2rem;
-  transform: rotate(-5deg);
 }

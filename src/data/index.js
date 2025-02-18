@@ -53,24 +53,26 @@ const questionsAndAnswers = [
 const resultAnimals = {
   excellent: {
     animal: 'jaguar',
-    animalDescription: 'Spiel about why jaguar is the best.',
-    resultIntro: 'You know your stuff!'
+    animalDescription: 'Your knowledge is as sharp as a jaguar\'s instincts — stealthy, precise, and worthy of ruling the Costa Rican jungle!',
+    resultIntro: 'Top of the food chain!'
   },
   good: {
-    animal: 'turtle',
-    animalDescription: 'Spiel about why turtle is wise',
-    resultIntro: 'Pretty good stuff!'
+    animal: 'toucan',
+    animalDescription: 'Bright and bold like a toucan, you\'ve got some solid knowledge. With a little more flair, you\'ll be soaring to the top!',
+    resultIntro: 'Flying high!'
   },
   mid: {
-    animal: 'monkey',
-    animalDescription: 'Spiel about why monkey need more work',
-    resultIntro: 'Cheeky, study harder!'
+    animal: 'capuchin monkey',
+    animalDescription: 'Like a curious capuchin, you know a bit about Costa Rica, but there\'s still plenty more to discover.',
+    resultIntro: 'You\'ve got some smarts, but you\'re still monkeying around!'
   },
   low: {
     animal: 'sloth',
-    animalDescription: 'Spiel about why sloths are slow',
-    resultIntro: 'Looks like you need to brush up!'
+    animalDescription: 'WYou may be iconic, but it\'s time to pick up the pace and learn more about Costa Rica!',
+    resultIntro: 'Looks like your brain is moving in slo-mo today!'
   }
 };
+
+
 
 export { questionsAndAnswers, resultAnimals };

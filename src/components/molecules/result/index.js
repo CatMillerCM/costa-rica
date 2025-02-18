@@ -1,20 +1,33 @@
 import PropTypes from 'prop-types';
-import { ResultText } from '@/components/atoms/result-text';
-import { ResultImage } from '@/components/atoms/result-image';
+import Image from 'next/image';
+import backgroundImg from '@/assets/background.png';
+import { resultAnimals } from '@/data';
 import styles from './result.module.css';
 
 const Result = ({ correctAnswers }) => {
+  const getResultAnimalData = () => {
+    if (correctAnswers <= 3) return resultAnimals.low
+    else if (correctAnswers <= 5) return resultAnimals.mid
+    else if (correctAnswers <= 7) return resultAnimals.good
+    return resultAnimals.excellent
+  }
+
   return (
     <div>
-      <ResultText
-        correctAnswers={correctAnswers}
+      <h2>You scored {correctAnswers}/10!</h2>
+      <p className={styles.animal}>You are a {getResultAnimalData().animal}!</p>
+      <p className={styles.description}>{getResultAnimalData().animalDescription}</p>
+      <div className={styles.resultAnimal}>
+      <Image
+        src={backgroundImg}
+        alt=""
       />
-      <ResultImage />
+    </div>
     </div>
   )
 };
 
-ResultText.propTypes = {
+Result.propTypes = {
   correctAnswers: PropTypes.number.isRequired
 };
 

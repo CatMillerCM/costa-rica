@@ -13,6 +13,11 @@
 
 h1, h2 {
   font-family: "Rubik Dirt", Verdana;
+  color: var(--color-amber-flare);
+  text-shadow: 4px 4px 20px var(--color-black);
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+  font-size: 2rem;
 }
 
 p {

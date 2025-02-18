@@ -16,20 +16,20 @@ const End = ({ setQuestionNumber, setCorrectAnswers, correctAnswers }) => {
 
   return (
     <div className={styles.endPage}>
-    <div className={styles.shareResult} ref={resultRef}>
-      <Logo />
-      <Result
-        correctAnswers={correctAnswers}
+      <div className={styles.shareResult} ref={resultRef}>
+        <Logo />
+        <Result
+          correctAnswers={correctAnswers}
+        />
+      </div>
+      <ShareButton
+        resultRef={resultRef}
+      />
+      <Button
+        onClick={retakeQuiz}
+        buttonText="Retake Quiz"
       />
     </div>
-    <ShareButton
-      resultRef={resultRef}
-    />
-    <Button
-      onClick={retakeQuiz}
-      buttonText="Retake Quiz"
-    />
-  </div>
   )
 };
 
