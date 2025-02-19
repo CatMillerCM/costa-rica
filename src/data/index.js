@@ -1,53 +1,54 @@
 const questionsAndAnswers = [
   {
-    question: 'What is the average speed of a sloth?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'Which of these abilities is the Basilisk Lizard known for?',
+    options: ['It can walk on water', 'It can fly short distances', 'It can swim in freezing temperatures', 'It can change its skin color'],
+    answer: 'It can walk on water'
   },
   {
-    question: 'What is question 2?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'What is the primary diet of a Costa Rican Jaguar?',
+    options: ['Fruit and berries', 'Small mammals and deer', 'Insects and reptiles', 'Fish and amphibians'],
+    answer: 'Small mammals and deer'
   },
   {
-    question: 'What is question 3?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
-  },  {
-    question: 'What is question 4?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'What unique feature do Red-Eyed Tree Frogs use to defend themselves from predators?',
+    options: ['They can change colours', 'They are highly venomous', 'Their bright colours are confusing', 'They make loud, echoing sounds'],
+    answer: 'Their bright colours are confusing'
   },
   {
-    question: 'What is question 5?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'Why do Sloths move so slowly?',
+    options: ['They sleep 20 hours a day', 'They have a very low metabolic rate', 'They have long, heavy fur', 'They are preparing to migrate'],
+    answer: 'They have a very low metabolic rate'
   },
   {
-    question: 'What is question 6?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'How far away can a Howler Monkey\'s call be heard from?',
+    options: ['1 mile', '2 miles', '3 miles', '4 miles'],
+    answer: '3 miles'
   },
   {
-    question: 'What is question 7?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'The White-Headed Capuchin Monkey is known for what behavior?',
+    options: ['Building nests in trees', 'Using stones to crack open nuts', 'Creating complex tools', 'Carrying food on their backs'],
+    answer: 'Using stones to crack open nuts'
   },
   {
-    question: 'What is question 8?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'Which Costa Rican beach is famous for being a nesting site for Green Sea Turtles?',
+    options: ['Tamarindo', 'Coco', 'Tortuguero', 'Manuel Antonio'],
+    answer: 'Tortuguero'
   },
   {
-    question: 'What is question 9?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
+    question: 'How do toucans communicate with each other?',
+    options: ['Through songs and calls', 'By mimicking other animals', 'Through body movements', 'By changing the color of their beaks'],
+    answer: 'Through songs and calls'
   },
   {
-    question: 'What is question 10?',
-    options: ['A', 'B', 'C', 'D'],
-    answer: 'A'
-  }
+    question: 'How fast can hummingbirds beat their wings?',
+    options: ['35 beats per second', '45 beats per second', '60 beats per second', '75 beats per second'],
+    answer: '75 beats per second'
+  },
+  {
+    question: 'What extra thing does an iguana have?',
+    options: ['A third eye', 'A fourth dimension', 'A fifth leg', 'A sixth sense'],
+    answer: 'A third eye'
+  },
 ];
 
 const resultAnimals = {
