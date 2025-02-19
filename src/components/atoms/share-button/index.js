@@ -8,7 +8,7 @@ const ShareButton = ({ resultRef }) => {
 
     const elementsToBeModified = idsToBeModified.map((id) => document.getElementById(id));
     const originalTexts = elementsToBeModified.map((el) => el.textContent);
-    const modifiedTexts = elementsToBeModified.map((el) => el.textContent.replace(/you are/ig, "I am").replace(/you/ig, "I").replace("Your", "My").replace("your", "my"));
+    const modifiedTexts = elementsToBeModified.map((el) => el.textContent.replace(/you are/ig, "I am").replace("Your", "My").replace("your", "my").replace(/you/ig, "I"));
     elementsToBeModified.forEach((el, index) => el.textContent = modifiedTexts[index]);
 
     try {
