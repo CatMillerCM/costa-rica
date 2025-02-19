@@ -24,6 +24,7 @@ const End = ({ setQuestionNumber, setCorrectAnswers, correctAnswers }) => {
       </div>
       <ShareButton
         resultRef={resultRef}
+        correctAnswers={correctAnswers}
       />
       <Button
         onClick={retakeQuiz}

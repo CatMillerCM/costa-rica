@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { toPng } from 'html-to-image';
 import styles from './share-button.module.css';
 
-const ShareButton = ({ resultRef }) => {
+const ShareButton = ({ resultRef, correctAnswers }) => {
   const shareResult = async () => {
     const idsToBeModified = ['score', 'animal', 'description'];
 
@@ -17,7 +17,11 @@ const ShareButton = ({ resultRef }) => {
   
       if (blob && navigator.canShare) {
         const file = new File([blob], 'Costa Eu-rica Result.png', { type: 'image/png' });
-        await navigator.share({ files: [file] });
+        await navigator.share({
+          title: "I just finished the Costa Eu-rica Quiz! 🎉",
+          text: `I scored ${correctAnswers}/10! Try it yourself at https://costa-rica.cat-miller.com"`,
+          files: [file]
+        });
       } else {
         alert('Your browser does not support sharing images.');
       }
@@ -42,6 +46,7 @@ const ShareButton = ({ resultRef }) => {
 
 ShareButton.propTypes = {
   resultRef: PropTypes.object.isRequired,
+  correctAnswers: PropTypes.number.isRequired
 };
 
 export { ShareButton };
