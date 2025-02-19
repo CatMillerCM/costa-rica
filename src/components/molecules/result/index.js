@@ -16,9 +16,9 @@ const Result = ({ correctAnswers }) => {
 
   return (
     <div>
-      <h2>You scored {correctAnswers}/10!</h2>
-      <p className={styles.animal}>You are a {resultAnimal}!</p>
-      <p className={styles.description}>{getResultAnimalData().animalDescription}</p>
+      <h2 id="score">You scored {correctAnswers}/10!</h2>
+      <p id="animal" className={styles.animal}>You are a {resultAnimal}!</p>
+      <p id="description" className={styles.description}>{getResultAnimalData().animalDescription}</p>
       <div className={styles.resultAnimal}>
       <Image
         src={animalImages[resultAnimal]}
