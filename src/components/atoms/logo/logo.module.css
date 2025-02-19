@@ -1,5 +1,5 @@
 .costa, .rica {
-  font-family: "Rubik Dirt", Verdana;
+  font-family: var(--font-rubik-dirt);
   font-size: 1.5rem;
   color: var(--color-sunbeam-yellow);
   text-shadow: 4px 4px 20px var(--color-black);
