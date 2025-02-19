@@ -5,7 +5,8 @@ const Answer = ({ result, answer }) => {
   return (
     <div className={styles.answer}>
       <p>That is {result}!</p>
-      <p>{result === 'correct' ? 'Well done!' : `The correct answer was ${answer}.`}</p>
+      <p>{result === 'correct' ? 'Well done!' : 'The correct answer was:'}</p>
+      <p>{answer}</p>
     </div>
   )
 };
