@@ -1,4 +1,5 @@
 import { Gaegu, Rubik_Dirt } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 export const gaegu = Gaegu({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${gaegu.variable} ${rubikDirt.variable}`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-2S30ZRZ2ZB" />
     </html>
   );
 };
