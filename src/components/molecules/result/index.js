@@ -20,11 +20,11 @@ const Result = ({ correctAnswers }) => {
       <p id="animal" className={styles.animal}>You are a {resultAnimal}!</p>
       <p id="description" className={styles.description}>{getResultAnimalData().animalDescription}</p>
       <div className={styles.resultAnimal}>
-      <Image
-        src={animalImages[resultAnimal]}
-        alt={resultAnimal}
-      />
-    </div>
+        <Image
+          src={animalImages[resultAnimal]}
+          alt={resultAnimal}
+        />
+      </div>
     </div>
   )
 };
