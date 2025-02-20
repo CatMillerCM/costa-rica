@@ -19,7 +19,7 @@
   height: auto;
   position: absolute;
   opacity: 0;
-  filter: drop-shadow(4px 4px 20px var(--color-black));
+  filter: drop-shadow(4px 4px 5px var(--color-black));
 }
 
 .basiliskLizard {
@@ -55,7 +55,7 @@
 }
 
 .turtle {
-  width: 8rem;
+  width: 7rem;
   margin: 14.5rem 0 0 -10.5rem;
   z-index: 1;
   animation: flyIn 1s ease-in forwards;
