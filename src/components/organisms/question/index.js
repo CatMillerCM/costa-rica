@@ -40,35 +40,34 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
 
   return (
     <div className={styles.questionPage}>
-    <Logo />
-    <QuestionText
-      questionNumber={questionNumber}
-      question={questionsAndAnswers[questionNumber - 1].question}
-    />
-    <Options 
-      options={questionsAndAnswers[questionNumber - 1].options}
-      selectedOption={selectedOption}
-      result={result}
-      answer={questionsAndAnswers[questionNumber - 1].answer}
-      onClick={selectOption}
-    />
-    {result &&
-      <Answer
-        result={result}
-        answer={questionsAndAnswers[questionNumber - 1].answer}
+      <Logo />
+      <QuestionText
+        questionNumber={questionNumber}
+        question={questionsAndAnswers[questionNumber - 1].question}
       />
-    }
-    <Button
-      onClick={checkAnswer}
-      disabled={disableCheckButton}
-      buttonText="Check Answer"
-    />
-    <Button
-      onClick={proceedToNextQuestion}
-      disabled={disableNextButton}
-      buttonText={questionNumber === 10 ? "See My Results" : "Next Question"}
-    />
-  </div>
+      <Options 
+        questionData={questionsAndAnswers[questionNumber - 1]}
+        selectedOption={selectedOption}
+        result={result}
+        onClick={selectOption}
+      />
+      {result &&
+        <Answer
+          result={result}
+          answer={questionsAndAnswers[questionNumber - 1].answer}
+        />
+      }
+      <Button
+        onClick={checkAnswer}
+        disabled={disableCheckButton}
+        buttonText="Check Answer"
+      />
+      <Button
+        onClick={proceedToNextQuestion}
+        disabled={disableNextButton}
+        buttonText={questionNumber === 10 ? "See My Results" : "Next Question"}
+      />
+    </div>
   )
 };
 

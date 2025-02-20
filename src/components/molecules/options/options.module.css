@@ -3,10 +3,127 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  margin-bottom: 5rem;
+  margin: 3rem 0 5rem;
   padding: 0 2rem;
 }
 
 .result {
   margin-bottom: 1rem;
+}
+
+.image {
+  height: auto;
+  position: absolute;
+}
+
+.basiliskLizard {
+  width: 10rem;
+  margin-top: -4rem;
+  justify-self: end;
+}
+
+.capuchinMonkey {
+  width: 8rem;
+  height: 6.75rem;
+  justify-self: start;
+  margin: 17.5rem 0 0 -1.5rem;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+
+.hummingbird {
+  justify-self: end;
+  margin: 9.25rem -2rem 0 0;
+  width: 9rem;
+  transform: scaleX(-1) rotate(12deg);
+}
+
+.redEyedFrog {
+  width: 8rem;
+  margin-top: -5.25rem;
+}
+
+.jaguar {
+  width: 10rem;
+  margin-top: -9.4rem;
+  justify-self: end;
+}
+
+.turtle {
+  width: 9rem;
+  z-index: 1;
+  justify-self: start;
+  margin: 14rem 0 0 -1rem;
+}
+
+.howlerMonkey {
+  width: 12.5rem;
+  justify-self: end;
+  margin-top: -7rem;
+}
+
+.sloth {
+  width: 7.5rem;
+  margin: 16.75rem 0 0 -1rem;
+  z-index: 1;
+}
+
+.toucan {
+  justify-self: end;
+  margin: -8.25rem -1.5rem 0 0;
+  width: 9rem;
+  transform: scaleX(-1);
+}
+
+.iguana {
+  justify-self: start;
+  margin-top: -4.5rem;
+  width: 10rem;
+  transform: scaleX(-1);
+}
+
+@media screen and (min-width: 768px) {
+  .options {
+    margin: 3rem 0 4rem;
+  }
+
+  .result {
+    margin-bottom: 1rem;
+  }
+
+  .capuchinMonkey {
+    margin: 15.5rem 0 0 -2.5rem;
+  }
+
+  .hummingbird {
+    margin: 8rem -6rem 0 0;
+  }
+
+  .redEyedFrog {
+    width: 7.5rem;
+    margin-top: -4rem;
+  }
+
+  .jaguar {
+    margin: 1.5rem -8.5rem;
+    transform: scaleX(-1);
+  }
+
+  .turtle {
+    margin: 13rem 0 0 -2rem;
+  }
+
+  .howlerMonkey {
+    width: 9.5rem;
+    margin-top: -5.25rem;
+  }
+
+  .sloth {
+    margin: 14rem 0 0 -1.5rem
+  }
+
+  .toucan {
+    margin-top: -7.25rem;
+    width: 8rem;
+  }
 }

@@ -10,6 +10,7 @@
   color: var(--color-deep-forest);
   line-height: 1.1rem;
   border: none;
+  cursor: pointer;
 }
 
 .chosen {

@@ -8,3 +8,10 @@
 .question {
   margin: 0 0.75rem 2rem;
 }
+
+@media screen and (min-width: 768px) {
+  .question {
+    margin: 0 0.75rem 0.75rem;
+    min-height: 5rem;
+  }
+}

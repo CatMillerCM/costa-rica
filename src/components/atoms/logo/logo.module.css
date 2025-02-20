@@ -4,6 +4,7 @@
   align-items: center;
   max-width: 7.75rem;
   min-width: 7.75rem;
+  justify-self: center;
 }
 
 .scarletMacaw {

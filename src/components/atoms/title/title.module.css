@@ -15,8 +15,8 @@
 .scarletMacaw {
   align-self: flex-start;
   width: 11rem;
-  height: 11rem;
-  margin: 0 0 -8.8rem -1.2rem;
+  height: auto;
+  margin: 0 0 -8.9rem -1rem;
   z-index: 1;
 }
 
@@ -46,7 +46,7 @@
 
 .iguana {
   width: 10rem;
-  height: 10rem;
-  margin-top: -2rem;
-  margin-bottom: -4rem;
+  height: auto;
+  margin-bottom: -1.25rem;
+  z-index: 1;
 }

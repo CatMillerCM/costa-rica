@@ -5,8 +5,10 @@ const Answer = ({ result, answer }) => {
   return (
     <div className={styles.answer}>
       <p>That is {result}!</p>
-      <p>{result === 'correct' ? 'Well done!' : 'The correct answer was:'}</p>
-      <p>{answer}</p>
+      <div className={styles.correctAnswer}>
+        <p>{result === 'correct' ? 'Well done!' : 'The correct answer is:'}</p>
+        {result === 'incorrect' && <p>{answer}</p>}
+      </div>
     </div>
   )
 };

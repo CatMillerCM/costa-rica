@@ -1,8 +1,10 @@
 .main {
-  height: 100dvh;
+  min-height: 100dvh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: darkgreen;
   background-image: url("../assets/background.png");
+  padding: 1rem;
 }

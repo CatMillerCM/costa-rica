@@ -10,3 +10,9 @@
   width: 80%;
   box-shadow: 6px 6px 20px var(--color-black);  
 }
+
+@media screen and (min-width: 768px) {
+  .questionPage {
+    padding: 1rem 0 0;
+  }
+}
