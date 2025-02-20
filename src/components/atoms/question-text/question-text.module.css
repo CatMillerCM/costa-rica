@@ -1,7 +1,7 @@
 .number {
   color: var(--color-neon-lime);
   font-size: 1.25rem;
-  margin-bottom: 0;
+  margin-bottom: -0.5rem;
   transform: rotate(-5deg);
 }
 
