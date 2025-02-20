@@ -1,4 +1,6 @@
 .main {
+  width: 100dvw;
+  max-width: 100dvw;
   min-height: 100dvh;
   height: 100%;
   display: flex;
@@ -7,4 +9,5 @@
   background-color: darkgreen;
   background-image: url("../assets/background.png");
   padding: 1rem;
+  overflow-x: hidden;
 }
