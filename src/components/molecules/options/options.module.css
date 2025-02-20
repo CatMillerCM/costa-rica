@@ -20,7 +20,7 @@
 .basiliskLizard {
   width: 9.5rem;
   margin-top: -3.8rem;
-  justify-self: end;
+  justify-self: flex-end;
   animation: thudDown 1s ease-in forwards;
 }
 
@@ -28,7 +28,7 @@
   width: 7rem;
   height: 6.5rem;
   margin: 16.5rem 0 0 -2rem;
-  justify-self: start;
+  justify-self: flex-start;
   z-index: 1;
   animation: thudDown 1s ease-in forwards;
 }
@@ -36,7 +36,7 @@
 .hummingbird {
   width: 9rem;
   margin: 8.75rem -2rem 0 0;
-  justify-self: end;
+  justify-self: flex-end;
   animation: flyIn 1s ease-in forwards;
 }
 
@@ -49,14 +49,14 @@
 .jaguar {
   width: 8rem;
   margin: -7.4rem -0.5rem 0 0;
-  justify-self: end;
+  justify-self: flex-end;
   animation: thudDown 1s ease-in forwards;
 }
 
 .turtle {
   width: 8rem;
   margin: 14.5rem 0 0 -1rem;
-  justify-self: start;
+  justify-self: flex-start;
   z-index: 1;
   animation: flyIn 1s ease-in forwards;
 }
@@ -64,7 +64,7 @@
 .howlerMonkey {
   width: 8.5rem;
   margin-top: -4.75rem;
-  justify-self: end;
+  justify-self: flex-end;
   animation: thudDown 1s ease-in forwards;
 }
 
@@ -78,7 +78,7 @@
 .toucan {
   width: 8.25rem;
   margin: 14.25rem -2rem 0 0;
-  justify-self: end;
+  justify-self: flex-end;
   z-index: 1;
   animation: thudDown 1s ease-in forwards;
 }
@@ -86,7 +86,7 @@
 .iguana {
   width: 9rem;
   margin-top: -4rem;
-  justify-self: start;
+  justify-self: flex-start;
   animation: thudDown 1s ease-in forwards;
 }
 

@@ -43,8 +43,8 @@ const questionsAndAnswers = [
   },
   {
     question: 'Why do Sloths move so slowly?',
-    options: ['They sleep 20 hours a day', 'They have a very low metabolic rate', 'They have long, heavy fur', 'They are preparing to migrate'],
-    answer: 'They have a very low metabolic rate',
+    options: ['They sleep 20 hours a day', 'They have a low metabolic rate', 'They have long, heavy fur', 'They are preparing to migrate'],
+    answer: 'They have a low metabolic rate',
     animal: 'sloth'
   },
   {
