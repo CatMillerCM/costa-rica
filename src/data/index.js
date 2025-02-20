@@ -6,7 +6,7 @@ const questionsAndAnswers = [
     animal: 'basilisk lizard'
   },
   {
-    question: 'The Capuchin Monkey is known for what behavior?',
+    question: 'The Capuchin Monkey is known for what behaviour?',
     options: ['Building nests in trees', 'Using stones to crack open nuts', 'Creating complex tools', 'Carrying food on their backs'],
     answer: 'Using stones to crack open nuts',
     animal: 'capuchin monkey'

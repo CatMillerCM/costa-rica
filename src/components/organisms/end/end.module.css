@@ -7,8 +7,9 @@
   padding: 0 0 1rem;
   background-color: var(--color-deep-forest);
   border-radius: 20px;
-  width: 80%;
-  box-shadow: 6px 6px 20px var(--color-black);  
+  width: 86%;
+  box-shadow: 6px 6px 20px var(--color-black);
+  margin: 1rem;
 }
 
 .shareResult {
