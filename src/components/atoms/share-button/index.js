@@ -19,10 +19,23 @@ const ShareButton = ({ resultRef, correctAnswers }) => {
     elementsToBeModified.forEach((el, index) => el.textContent = modifiedTexts[index]);
 
     try {
-      await toPng(resultRef.current);
-      await toPng(resultRef.current);
-      await toPng(resultRef.current);
+      const buildPng = async () => {
+        const element = document.getElementById('image-node');
+    
+        let dataUrl = '';
+        const minDataLength = 544162;
+        let i = 0;
+        const maxAttempts = 10;
+    
+        while (dataUrl.length < minDataLength && i < maxAttempts) {
+          dataUrl = await toPng(element);
+          i += 1;
+        }
+    
+        return dataUrl;
+      };
 
+      await buildPng();
       const dataUrl = await toPng(resultRef.current);
       const blob = await fetch(dataUrl).then((res) => res.blob());
   
