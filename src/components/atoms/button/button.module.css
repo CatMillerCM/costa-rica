@@ -15,6 +15,6 @@
 }
 
 .button:disabled {
-  cursor: none;
+  cursor: auto;
   opacity: 0.3;
 }

@@ -24,3 +24,7 @@
 .incorrect {
   background-color: var(--color-crimson-ember);
 }
+
+.option:disabled {
+  cursor: auto;
+}

@@ -13,6 +13,7 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
   const [result, setResult] = useState(null);
   const [disableCheckButton, setDisableCheckButton] = useState(true);
   const [disableNextButton, setDisableNextButton] = useState(true);
+  const [disableOptions, setDisableOptions] = useState(false);
 
   const proceedToNextQuestion = () => {
     setQuestionNumber((prev) => ++prev);
@@ -20,6 +21,7 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
     setResult(null);
     setDisableCheckButton(true);
     setDisableNextButton(true);
+    setDisableOptions(false);
   }
 
   const selectOption = (option) => {
@@ -29,6 +31,7 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
 
   const checkAnswer = () => {
     setDisableCheckButton(true);
+    setDisableOptions(true);
     if (selectedOption === questionsAndAnswers[questionNumber - 1].answer) {
       setCorrectAnswers((prev) => ++prev);
       setResult('correct');
@@ -49,6 +52,7 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
         questionData={questionsAndAnswers[questionNumber - 1]}
         selectedOption={selectedOption}
         result={result}
+        disableOptions={disableOptions}
         onClick={selectOption}
       />
       {result &&

@@ -4,7 +4,7 @@ import { Option } from '@/components/atoms/option';
 import { animalImages } from '@/assets/animals';
 import styles from './options.module.css';
 
-const Options = ({ questionData, selectedOption, result, onClick }) => {
+const Options = ({ questionData, selectedOption, result, disableOptions, onClick }) => {
   const animaClassname = questionData.animal.replace(/[-\s](.)/g, (_, char) => char.toUpperCase());
 
   return (
@@ -24,6 +24,7 @@ const Options = ({ questionData, selectedOption, result, onClick }) => {
             selectedOption={selectedOption}
             result={result}
             answer={questionData.answer}
+            disabled={disableOptions}
             onClick={onClick}
           /> 
         )
@@ -38,6 +39,7 @@ Options.propTypes = {
   questionData: PropTypes.object.isRequired,
   selectedOption: PropTypes.string.isRequired,
   result: PropTypes.string.isRequired,
+  disableOptions: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
