@@ -12,13 +12,13 @@ const questionsAndAnswers = [
     animal: 'capuchin monkey'
   },
   {
-    question: 'How fast can hummingbirds beat their wings?',
+    question: 'On average, how fast can hummingbirds beat their wings?',
     options: ['35 beats per second', '45 beats per second', '60 beats per second', '75 beats per second'],
     answer: '75 beats per second',
     animal: 'hummingbird'
   },
   {
-    question: 'What feature allows Red-Eyed Tree Frogs to defend against predators?',
+    question: 'What feature defends Red-Eyed Tree Frogs against predators?',
     options: ['They can change colours', 'They are highly venomous', 'Their bright colours are confusing', 'They make loud, echoing sounds'],
     answer: 'Their bright colours are confusing',
     animal: 'red-eyed frog'
@@ -30,7 +30,7 @@ const questionsAndAnswers = [
     animal: 'jaguar'
   },
   {
-    question: 'Which Costa Rican beach is famous for being a nesting site for Green Turtles?',
+    question: 'Which Costa Rican beach is a famous nesting site for Green Turtles?',
     options: ['Tamarindo', 'Coco', 'Tortuguero', 'Manuel Antonio'],
     answer: 'Tortuguero',
     animal: 'turtle'
@@ -42,19 +42,19 @@ const questionsAndAnswers = [
     animal: 'howler monkey'
   },
   {
-    question: 'Why do Sloths move so slowly?',
+    question: 'Why do Sloths move so slowly compared to other animals?',
     options: ['They sleep 20 hours a day', 'They have a low metabolic rate', 'They have long, heavy fur', 'They are preparing to migrate'],
     answer: 'They have a low metabolic rate',
     animal: 'sloth'
   },
   {
-    question: 'How do toucans communicate with each other?',
+    question: 'How do toucans communicate with each other in the wild?',
     options: ['Through songs and calls', 'By mimicking other animals', 'Through body movements', 'By changing the color of their beaks'],
     answer: 'Through songs and calls',
     animal: 'toucan'
   },
   {
-    question: 'What extra thing does an iguana have?',
+    question: 'What surprising extra trait does an iguana have?',
     options: ['A third eye', 'A fourth dimension', 'A fifth leg', 'A sixth sense'],
     answer: 'A third eye',
     animal: 'iguana'
