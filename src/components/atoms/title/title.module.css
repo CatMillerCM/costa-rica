@@ -14,9 +14,9 @@
 
 .scarletMacaw {
   align-self: flex-start;
-  width: 11rem;
+  width: 9rem;
   height: auto;
-  margin: 0 0 -8.9rem -1rem;
+  margin: 0 0 -7.5rem 1rem;
   z-index: 1;
   animation: tilt 2s linear infinite;
 }
@@ -32,9 +32,9 @@
 
 .hangingSloth {
   align-self: flex-end;
-  width: 10rem;
-  height: 8.5rem;
-  margin: -4rem 1.5rem 0 0;
+  width: 8.5rem;
+  height: 7rem;
+  margin: -3.65rem 2.5rem 0 0;
   transform: rotate(9deg);
   z-index: 1;
   animation: swing 3s ease-in-out infinite;
