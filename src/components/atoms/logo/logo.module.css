@@ -12,6 +12,7 @@
   height: 3rem;
   margin: 0 0 -2.4rem -0.25rem;
   z-index: 1;
+  filter: drop-shadow(4px 4px 20px var(--color-black));
 }
 
 .costa, .rica {
@@ -34,4 +35,5 @@
   margin-top: -1.35rem;
   transform: rotate(9deg);
   z-index: 1;
+  filter: drop-shadow(4px 4px 20px var(--color-black));
 }
