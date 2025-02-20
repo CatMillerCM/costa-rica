@@ -1,13 +1,13 @@
 .answer {
-  max-height: 4rem;
-  min-height: 4rem;
   color: var(--color-amber-flare);
   line-height: 1rem;
+  max-height: 4rem;
+  min-height: 4rem;
 }
 
 .answer p {
-  margin: 0;
   font-size: 1.3rem;
+  margin: 0;
 }
 
 .correctAnswer {

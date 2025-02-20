@@ -1,14 +1,14 @@
 .startPage {
+  width: 86%;
+  padding: 2rem 0 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem 0 1rem;
   background-color: var(--color-deep-forest);
   border-radius: 20px;
-  width: 86%;
   box-shadow: 6px 6px 20px var(--color-black);
-  margin: 1rem;
 }

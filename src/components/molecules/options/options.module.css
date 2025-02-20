@@ -1,10 +1,10 @@
 .options {
+  padding: 0 2rem;
+  margin: 3rem 0 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0.75rem;
-  margin: 3rem 0 5rem;
-  padding: 0 2rem;
 }
 
 .result {
@@ -27,16 +27,16 @@
 .capuchinMonkey {
   width: 7rem;
   height: 6.5rem;
-  justify-self: start;
   margin: 16.5rem 0 0 -2rem;
+  justify-self: start;
   z-index: 1;
   animation: thudDown 1s ease-in forwards;
 }
 
 .hummingbird {
-  justify-self: end;
-  margin: 8.75rem -2rem 0 0;
   width: 9rem;
+  margin: 8.75rem -2rem 0 0;
+  justify-self: end;
   animation: flyIn 1s ease-in forwards;
 }
 
@@ -55,16 +55,16 @@
 
 .turtle {
   width: 8rem;
-  z-index: 1;
-  justify-self: start;
   margin: 14.5rem 0 0 -1rem;
+  justify-self: start;
+  z-index: 1;
   animation: flyIn 1s ease-in forwards;
 }
 
 .howlerMonkey {
   width: 8.5rem;
-  justify-self: end;
   margin-top: -4.75rem;
+  justify-self: end;
   animation: thudDown 1s ease-in forwards;
 }
 
@@ -76,17 +76,17 @@
 }
 
 .toucan {
-  justify-self: end;
-  margin: 14.25rem -2rem 0 0;
   width: 8.25rem;
+  margin: 14.25rem -2rem 0 0;
+  justify-self: end;
   z-index: 1;
   animation: thudDown 1s ease-in forwards;
 }
 
 .iguana {
-  justify-self: start;
-  margin-top: -4rem;
   width: 9rem;
+  margin-top: -4rem;
+  justify-self: start;
   animation: thudDown 1s ease-in forwards;
 }
 
@@ -126,7 +126,7 @@
   }
 
   .sloth {
-    margin: 14rem 0 0 -1.5rem
+    margin: 14rem 0 0 -1.5rem;
   }
 
   .toucan {

@@ -1,13 +1,13 @@
 .questionPage {
+  width: 86%;
+  padding: 1rem 0 0.5rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem 0 0.5rem;
   background-color: var(--color-deep-forest);
   border-radius: 20px;
-  width: 86%;
   box-shadow: 6px 6px 20px var(--color-black);
-  margin: 1rem;
 }

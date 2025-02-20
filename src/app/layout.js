@@ -15,8 +15,8 @@ export const rubikDirt = Rubik_Dirt({
 });
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "Costa Eu-rica",
+  description: "Test your knowledge in this fun, interactive quiz about Costa Rica's famous animals.",
   icons: {
     icon: '/favicon.ico'
   },
