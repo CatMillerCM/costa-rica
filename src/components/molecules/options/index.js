@@ -8,13 +8,14 @@ const Options = ({ questionData, selectedOption, result, onClick }) => {
   const animaClassname = questionData.animal.replace(/[-\s](.)/g, (_, char) => char.toUpperCase());
 
   return (
-    <div className={`${styles.options} ${result ? styles.result : ''}`}>
+    <div className={styles.container}>
       <Image
         key={questionData.animal}
         className={`${styles.image} ${styles[animaClassname]}`}
         src={animalImages[questionData.animal]}
         alt={questionData.animal}
       />
+    <div className={`${styles.options} ${result ? styles.result : ''}`}>
       {questionData.options.map((option) => {
         return (
           <Option 
@@ -27,7 +28,9 @@ const Options = ({ questionData, selectedOption, result, onClick }) => {
           /> 
         )
       })}
+    </div>
   </div>
+
   )
 };
 
