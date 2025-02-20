@@ -1,24 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 26rem;
+  min-width: 26rem;
+}
+
+
+.scarletMacaw {
+  align-self: flex-start;
+  width: 11rem;
+  height: 11rem;
+  margin: 0 0 -8.8rem -1.2rem;
+  z-index: 1;
+}
+
 .costa, .rica {
   font-size: 5.25rem;
   margin: 0;
-  /* animation: crashIn 1s cubic-bezier(0.59, 1.09, 0.92, 1.06) forwards; */
 }
 
 .rica {
   margin-top: -2.25rem;
 }
 
+.hangingSloth {
+  align-self: flex-end;
+  width: 11.5rem;
+  height: 10rem;
+  margin-top: -4.4rem;
+  transform: rotate(9deg);
+  z-index: 1;
+}
+
 .intro {
   color: var(--color-sunbeam-yellow);
   padding: 0 3rem;
+  margin-top: -0.75rem;
 }
 
-@keyframes crashIn {
-  0% {
-    transform: translateY(-100vh) rotate(-5deg);;
-  }
-
-  100% {
-    transform: translateY(0) rotate(-5deg);;
-  }
+.iguana {
+  width: 10rem;
+  height: 10rem;
+  margin-top: -2rem;
+  margin-bottom: -4rem;
 }
