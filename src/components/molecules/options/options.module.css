@@ -14,12 +14,14 @@
 .image {
   height: auto;
   position: absolute;
+  opacity: 0;
 }
 
 .basiliskLizard {
   width: 9.5rem;
   margin-top: -3.8rem;
   justify-self: end;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .capuchinMonkey {
@@ -27,26 +29,28 @@
   height: 6.5rem;
   justify-self: start;
   margin: 16.5rem 0 0 -2rem;
-  transform: scaleX(-1);
   z-index: 1;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .hummingbird {
   justify-self: end;
   margin: 8.75rem -2rem 0 0;
   width: 9rem;
-  transform: scaleX(-1) rotate(12deg);
+  animation: flyIn 1s ease-in forwards;
 }
 
 .redEyedFrog {
   width: 7rem;
   margin-top: -3.75rem;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .jaguar {
   width: 8rem;
   margin: -7.4rem -0.5rem 0 0;
   justify-self: end;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .turtle {
@@ -54,33 +58,36 @@
   z-index: 1;
   justify-self: start;
   margin: 14.5rem 0 0 -1rem;
+  animation: flyIn 1s ease-in forwards;
 }
 
 .howlerMonkey {
   width: 8.5rem;
   justify-self: end;
   margin-top: -4.75rem;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .sloth {
   width: 7.5rem;
   margin: 15.5rem 0 0 -1.5rem;
   z-index: 1;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .toucan {
   justify-self: end;
   margin: 14.25rem -2rem 0 0;
   width: 8.25rem;
-  transform: scaleX(-1);
   z-index: 1;
+  animation: thudDown 1s ease-in forwards;
 }
 
 .iguana {
   justify-self: start;
   margin-top: -4rem;
   width: 9rem;
-  transform: scaleX(-1);
+  animation: thudDown 1s ease-in forwards;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,7 +114,6 @@
 
   .jaguar {
     margin: 3.25rem -6.5rem;
-    transform: scaleX(-1);
   }
 
   .turtle {
@@ -125,5 +131,33 @@
 
   .toucan {
     margin-top: 13.75rem;
+  }
+}
+
+@keyframes thudDown {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(100vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

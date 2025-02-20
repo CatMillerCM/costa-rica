@@ -10,6 +10,7 @@ const Options = ({ questionData, selectedOption, result, onClick }) => {
   return (
     <div className={`${styles.options} ${result ? styles.result : ''}`}>
       <Image
+        key={questionData.animal}
         className={`${styles.image} ${styles[animaClassname]}`}
         src={animalImages[questionData.animal]}
         alt={questionData.animal}
