@@ -30,7 +30,7 @@ const questionsAndAnswers = [
     animal: 'jaguar'
   },
   {
-    question: 'Which Costa Rican beach is a famous Green Turtle nesting site?',
+    question: 'Which Costa Rican beach is famous for Green Turtle nesting?',
     options: ['Tamarindo', 'Coco', 'Tortuguero', 'Manuel Antonio'],
     answer: 'Tortuguero',
     animal: 'turtle'
@@ -54,7 +54,7 @@ const questionsAndAnswers = [
     animal: 'toucan'
   },
   {
-    question: 'What surprising extra trait does an iguana have that makes it special?',
+    question: 'What surprising extra trait does an iguana possess?',
     options: ['A third eye', 'A fourth dimension', 'A fifth leg', 'A sixth sense'],
     answer: 'A third eye',
     animal: 'iguana'
