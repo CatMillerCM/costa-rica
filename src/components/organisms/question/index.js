@@ -55,17 +55,17 @@ const Question = ({ questionNumber, setQuestionNumber, setCorrectAnswers }) => {
         disableOptions={disableOptions}
         onClick={selectOption}
       />
-      {result &&
+      {result ?
         <Answer
           result={result}
           answer={questionsAndAnswers[questionNumber - 1].answer}
+        /> :
+        <Button
+          onClick={checkAnswer}
+          disabled={disableCheckButton}
+          buttonText="Check Answer"
         />
       }
-      <Button
-        onClick={checkAnswer}
-        disabled={disableCheckButton}
-        buttonText="Check Answer"
-      />
       <Button
         onClick={proceedToNextQuestion}
         disabled={disableNextButton}
