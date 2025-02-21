@@ -8,9 +8,9 @@
 
 .scarletMacaw {
   align-self: flex-start;
-  width: 3rem;
-  height: 3rem;
-  margin: 0 0 -2.4rem -0.25rem;
+  width: 2.5rem;
+  height: auto;
+  margin: 0 0 -2rem 0.7rem;
   z-index: 1;
   filter: drop-shadow(4px 4px 5px var(--color-black));
 }
@@ -18,7 +18,7 @@
 .costa, .rica {
   color: var(--color-sunbeam-yellow);
   font-family: var(--font-rubik-dirt);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0;
   text-shadow: 4px 4px 10px var(--color-black);
   transform: rotate(-5deg);
@@ -30,9 +30,9 @@
 
 .hangingSloth {
   align-self: flex-end;
-  width: 3.5rem;
-  height: 3rem;
-  margin-top: -1.35rem;
+  width: 2.5rem;
+  height: 2rem;
+  margin: -1rem 1rem 0 0;
   transform: rotate(9deg);
   z-index: 1;
   filter: drop-shadow(4px 4px 5px var(--color-black));
