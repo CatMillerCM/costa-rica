@@ -18,7 +18,7 @@ const questionsAndAnswers = [
     animal: 'hummingbird'
   },
   {
-    question: 'What feature defends Red-Eyed Tree Frogs against predators?',
+    question: 'What feature defends Red-Eyed Frogs against predators?',
     options: ['They can change colours', 'They are highly venomous', 'Their bright colours are confusing', 'They make loud, echoing sounds'],
     answer: 'Their bright colours are confusing',
     animal: 'red-eyed frog'
@@ -30,7 +30,7 @@ const questionsAndAnswers = [
     animal: 'jaguar'
   },
   {
-    question: 'Which Costa Rican beach is a famous nesting site for Green Turtles?',
+    question: 'Which Costa Rican beach is a famous Green Turtle nesting site?',
     options: ['Tamarindo', 'Coco', 'Tortuguero', 'Manuel Antonio'],
     answer: 'Tortuguero',
     animal: 'turtle'
@@ -54,7 +54,7 @@ const questionsAndAnswers = [
     animal: 'toucan'
   },
   {
-    question: 'What surprising extra trait does an iguana have?',
+    question: 'What surprising extra trait does an iguana have that makes it special?',
     options: ['A third eye', 'A fourth dimension', 'A fifth leg', 'A sixth sense'],
     answer: 'A third eye',
     animal: 'iguana'
