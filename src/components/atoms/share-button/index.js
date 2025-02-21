@@ -53,8 +53,7 @@ const ShareButton = ({ resultRef, correctAnswers }) => {
         setStateOfShare('Ready');
 
         await navigator.share({
-          title: "I just finished the Costa Eu-rica Quiz! 🎉",
-          text: `I scored ${correctAnswers}/10! Try it yourself at https://costa-rica.cat-miller.com"`,
+          text: `I just finished the Costa Eu-rica Quiz! 🎉%0AI scored ${correctAnswers}/10!%0ATry it yourself at https://costa-rica.cat-miller.com`,
           files: [file]
         });
       } else {
