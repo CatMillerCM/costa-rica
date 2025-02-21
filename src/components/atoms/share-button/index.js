@@ -20,20 +20,28 @@ const ShareButton = ({ resultRef, correctAnswers }) => {
 
     try {
       const buildPng = async () => {
-        const element = document.getElementById('image');
-    
         let dataUrl = '';
-        const minDataLength = 544162;
         let i = 0;
-        const maxAttempts = 10;
+        let maxAttempts = 5;
+        let cycle = [];
+        let repeat = true;
     
-        while (dataUrl.length < minDataLength && i < maxAttempts) {
-          dataUrl = await toPng(element);
+        while (repeat && i < maxAttempts) {
+          dataUrl = await toPng(resultRef.current, {
+            fetchRequestInit: {
+              cache: 'no-cache',
+            },
+            skipAutoScale: true,
+            includeQueryParams: true,
+            quality: 1,
+          });
           i += 1;
-        }
+          cycle[i] = dataUrl.length;
     
+          if (dataUrl.length > cycle[i - 1]) repeat = false;
+        }
         return dataUrl;
-      };
+    };
 
       await buildPng();
       const dataUrl = await toPng(resultRef.current);
