@@ -20,7 +20,7 @@ const ShareButton = ({ resultRef, correctAnswers }) => {
 
     try {
       const buildPng = async () => {
-        const element = document.getElementById('image-node');
+        const element = document.getElementById('image');
     
         let dataUrl = '';
         const minDataLength = 544162;
